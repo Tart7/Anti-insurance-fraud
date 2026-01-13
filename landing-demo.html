@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【模拟】百万医疗险 - 仅需0.6元</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+
+        .fake-header {
+            background: #fff;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            color: #333;
+        }
+
+        .promo-banner {
+            background: #ff4757;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .promo-banner h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .promo-banner p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .price-tag {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ffeaa7;
+        }
+
+        .small-print {
+            font-size: 0.6rem;
+            opacity: 0.7;
+            margin-top: 0px;
+        }
+
+        .form-area {
+            background: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .agreement {
+            font-size: 0.8rem;
+            color: #999;
+            display: flex;
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        .agreement input {
+            margin-top: 3px;
+        }
+
+        .cta-btn {
+            background: #ff4757;
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            margin-top: 20px;
+            cursor: pointer;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* 揭秘覆盖层 */
+        .expose-overlay {
+            position: absolute;
+            border: 2px dashed #da3633;
+            background: rgba(218, 54, 51, 0.1);
+            pointer-events: none;
+            /* 让点击穿透，方便演示交互 */
+        }
+
+        .expose-badge {
+            position: absolute;
+            background: #da3633;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 4px;
+            transform: translateY(-100%);
+            white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .alert-bar {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .alert-bar a {
+            color: #58a6ff;
+        }
+
+        /* 隐藏的陷阱 */
+        .hidden-fee {
+            color: #ccc;
+            font-size: 0.7rem;
+            text-align: center;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="alert-bar">
+        ⚠️ 这是一个演示页面，用于揭露诈骗套路，请勿当真！ <a href="index.html">返回防骗指南主页</a>
+    </div>
+
+    <div class="fake-header">🛡️ 泰超能百万医疗保障计划</div>
+
+    <div class="promo-banner" style="position: relative;">
+        <h1>首月仅需</h1>
+        <div class="price-tag">¥0.60</div>
+        <p>最高600万医疗保障 | 极速理赔</p>
+
+        <!-- 揭秘标记 -->
+        <div class="expose-overlay" style="top: 10px; left: 10px; right: 10px; bottom: 10px;">
+            <div class="expose-badge" style="left: 0; top: 0;">套路1: 巨大字号诱导首月低价</div>
+        </div>
+    </div>
+
+    <div class="form-area" style="position: relative;">
+        <div class="input-group">
+            <label>被保人姓名</label>
+            <!-- 模拟已获取隐私 -->
+            <input type="text" value="张** (自动匹配)" disabled style="background: #f9f9f9;">
+        </div>
+        <div class="input-group">
+            <label>身份证号</label>
+            <input type="text" value="1101************" disabled style="background: #f9f9f9;">
+        </div>
+
+        <!-- 揭秘标记 -->
+        <div class="expose-overlay" style="top: 0; left: 0; right: 0; bottom: 65%;">
+            <div class="expose-badge" style="left: 0;">套路2: 隐私泄露，自动填充信息</div>
+        </div>
+
+        <div class="agreement" style="position: relative;">
+            <input type="checkbox" checked> <!-- 默认勾选 -->
+            <span>
+                我已阅读并同意《保险条款》《自动扣款授权协议》《个人信息保护政策》
+            </span>
+
+            <!-- 揭秘标记 -->
+            <div class="expose-overlay" style="top: -5px; left: -5px; right: -5px; bottom: -5px;">
+                <div class="expose-badge" style="right: 0;">套路3: 违规默认勾选，隐藏在折叠协议中</div>
+            </div>
+        </div>
+
+        <button class="cta-btn" onclick="alert('模拟演示：此时已跳转京东支付签约界面，并未明确提示后续每月扣款83元！')">立即享受保障</button>
+
+        <div class="hidden-fee" style="position: relative;">
+            次月起每月保费 83元/月，自动续费
+            <!-- 揭秘标记 -->
+            <div class="expose-overlay" style="top: -2px; left: 0; right: 0; bottom: -2px;">
+                <div class="expose-badge"
+                    style="left: 50%; transform: translateX(-50%) translateY(100%); bottom: -25px;">套路4: 极小字号隐藏真实费用
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding: 20px; text-align: center; color: #999; font-size: 0.8rem;">
+        <p>已有 5,392,019 人领取保障</p>
+        <p>本产品由xx保险经纪有限公司销售</p>
+    </div>
+
+    <script>
+        // 模拟全局点击音效
+        document.body.addEventListener('click', function () {
+            console.log('【模拟】触发背景诱导音频播放');
+        });
+    </script>
+
+</body>
+
+</html>

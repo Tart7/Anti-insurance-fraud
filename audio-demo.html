@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音频诱导技术揭秘 - 防骗指南</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .category-section {
+            margin-bottom: 40px;
+        }
+
+        .category-title {
+            color: #d2a8ff;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 10px;
+        }
+
+        .audio-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .audio-item {
+            background: #21262d;
+            border: 1px solid #30363d;
+            padding: 15px;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .audio-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .file-icon {
+            font-size: 1.5rem;
+        }
+
+        .file-info {
+            flex: 1;
+        }
+
+        .file-name {
+            color: #58a6ff;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9rem;
+            word-break: break-all;
+        }
+
+        .file-desc {
+            color: #8b949e;
+            font-size: 0.8rem;
+            margin-top: 2px;
+        }
+
+        audio {
+            width: 100%;
+            height: 30px;
+            margin-top: 5px;
+        }
+
+        .code-block {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Roboto Mono', monospace;
+            color: #e6edf3;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .keyword-js {
+            color: #ff7b72;
+        }
+
+        .string-js {
+            color: #a5d6ff;
+        }
+
+        .comment-js {
+            color: #8b949e;
+        }
+
+        .func-js {
+            color: #d2a8ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="alert-header">
+        <div class="container">
+            <div class="alert-content">
+                <h1>🔊 音频诱导技术分析</h1>
+                <p>揭秘保险落地页如何利用隐藏的音频文件对老年人进行“洗脑”式引导。</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <p style="margin-bottom: 20px;"><a href="index.html">← 返回主页</a></p>
+
+        <section class="action-section" style="background: none; border: 1px solid #30363d;">
+            <h2>🚫 全局点击劫持技术</h2>
+            <p>为了绕过浏览器的“自动播放限制”以及有关部门对电话销售录音的监管，这些页面使用了一段特殊的 JavaScript 代码。</p>
+            <p>只要用户在页面上进行<strong>任何点击或触摸操作</strong>（甚至只是为了关闭弹窗），音频就会立即开始播放。</p>
+
+            <div class="code-block">
+                <span class="comment-js">// 真实代码片段分析</span><br>
+                <span class="keyword-js">var</span> <span class="func-js">playAudio</span> = <span
+                    class="keyword-js">function</span>() {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;document.<span class="func-js">querySelector</span>(<span
+                    class="string-js">"#id_audio_player"</span>).<span class="func-js">play</span>();<br>
+                };<br>
+                <br>
+                <span class="comment-js">// 绑定到全局点击事件，防不胜防</span><br>
+                window.<span class="func-js">onclick</span> = playAudio;<br>
+                window.<span class="func-js">ontouchstart</span> = playAudio;
+            </div>
+        </section>
+
+        <section class="tricks-section">
+            <h2>📂 诱导音频原声曝光</h2>
+            <p>以下是实际提取的48个音频文件，请点击试听（声音内容可能会引起不适）。</p>
+
+            <div id="audio-container">
+                <!-- 由 JS 动态生成音频列表 -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="disclaimer">⚠️ 警告：以上音频仅供防骗研究和警示使用，版权归原作者所有。</p>
+        </div>
+    </footer>
+
+    <script>
+        const baseUrl = 'https://cdns.bountech.com/marketfront/file/insurance/cdn/picture/NW/NWZA12/audio/';
+
+        const audioData = [
+            {
+                category: "投保引导 (Toubao)",
+                files: [
+                    { name: 'toubao_1.wav', desc: '投保引导 1' },
+                    { name: 'toubao_2.wav', desc: '投保引导 2' },
+                    { name: 'toubao_3.wav', desc: '投保引导 3' }
+                ],
+                icon: "🗣️"
+            },
+            {
+                category: "绑卡引导 (Bangka)",
+                files: [
+                    { name: 'bangka_1.wav', desc: '绑卡操作 1' },
+                    { name: 'bangka_2.wav', desc: '绑卡操作 2' },
+                    { name: 'bangka_3.wav', desc: '绑卡操作 3' }
+                ],
+                icon: "💳"
+            },
+            {
+                category: "下单催促 (Xiadan)",
+                files: [
+                    { name: 'xiadan_1.wav', desc: '催促下单 1' },
+                    { name: 'xiadan_2.wav', desc: '催促下单 2' }
+                ],
+                icon: "⏳"
+            },
+            {
+                category: "挽留用户 (Wanliu)",
+                files: [
+                    { name: 'wanliu_1.wav', desc: '挽留话术 1' },
+                    { name: 'wanliu_2.wav', desc: '挽留话术 2' },
+                    { name: 'wanliu_3.wav', desc: '挽留话术 3' }
+                ],
+                icon: "😭"
+            },
+            {
+                category: "手机号引导 (Shoujihao)",
+                files: [
+                    { name: 'shoujihao_1.wav', desc: '输入手机号 1' },
+                    { name: 'shoujihao_2.wav', desc: '输入手机号 2' },
+                    { name: 'shoujihao_3.wav', desc: '输入手机号 3' }
+                ],
+                icon: "📱"
+            },
+            {
+                category: "身份证引导 (Shenfenzheng)",
+                files: [
+                    { name: 'shenfenzheng_1.wav', desc: '输入身份证 1' },
+                    { name: 'shenfenzheng_2.wav', desc: '输入身份证 2' },
+                    { name: 'shenfenzheng_3.wav', desc: '输入身份证 3' }
+                ],
+                icon: "🆔"
+            },
+            {
+                category: "加需引导 (Jiabao)",
+                files: [
+                    { name: 'jiabao_1.wav', desc: '加购引导 1' },
+                    { name: 'jiabao_2.wav', desc: '加购引导 2' },
+                    { name: 'jiabao_3.wav', desc: '加购引导 3' }
+                ],
+                icon: "➕"
+            },
+            {
+                category: "拒保挽留 (Jubao)",
+                files: [
+                    { name: 'jubao_1.wav', desc: '拒保后挽留 1' },
+                    { name: 'jubao_2.wav', desc: '拒保后挽留 2' },
+                    { name: 'jubao_3.wav', desc: '拒保后挽留 3' }
+                ],
+                icon: "❌"
+            },
+            {
+                category: "其他功能类",
+                files: [
+                    { name: 'zhiyin.wav', desc: '通用指引' },
+                    { name: 'shouquan.wav', desc: '请求授权' }
+                ],
+                icon: "⚙️"
+            }
+        ];
+
+        const container = document.getElementById('audio-container');
+
+        audioData.forEach(group => {
+            const section = document.createElement('div');
+            section.className = 'category-section';
+
+            const title = document.createElement('h3');
+            title.className = 'category-title';
+            title.textContent = group.category;
+            section.appendChild(title);
+
+            const grid = document.createElement('div');
+            grid.className = 'audio-list';
+
+            group.files.forEach(file => {
+                const item = document.createElement('div');
+                item.className = 'audio-item';
+
+                item.innerHTML = `
+                    <div class="audio-header">
+                        <div class="file-icon">${group.icon}</div>
+                        <div class="file-info">
+                            <div class="file-name">${file.name}</div>
+                            <div class="file-desc">${file.desc}</div>
+                        </div>
+                    </div>
+                    <audio controls preload="none">
+                        <source src="${baseUrl}${file.name}" type="audio/wav">
+                        您的浏览器不支持音频播放。
+                    </audio>
+                `;
+                grid.appendChild(item);
+            });
+
+            section.appendChild(grid);
+            container.appendChild(section);
+        });
+
+        // 播放互斥：播放一个时暂停其他
+        document.addEventListener('play', function (e) {
+            var audios = document.getElementsByTagName('audio');
+            for (var i = 0, len = audios.length; i < len; i++) {
+                if (audios[i] != e.target) {
+                    audios[i].pause();
+                }
+            }
+        }, true);
+    </script>
+
+</body>
+
+</html>
